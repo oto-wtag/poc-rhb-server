@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// what is going on?
+// what is going on? shuld i update the config?
 // ✅ Fix CORS middleware
 app.use(
   cors({
