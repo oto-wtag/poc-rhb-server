@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 // ✅ Fix CORS middleware
 app.use(
   cors({
-    origin: ["https://healthhmate.vercel.app", "http://localhost:3000]"],
+    origin: ["https://rhb-poc.netlify.app/", "http://localhost:5173]"],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
