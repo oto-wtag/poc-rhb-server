@@ -8,19 +8,12 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // ✅ Fix CORS middleware
-const allowedOrigins = ["http://localhost:5173", "https://rhb-poc.netlify.app"];
 app.use(
   cors({
-    origin: (origin, callback) => {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
+    origin: ["https://healthhmate.vercel.app", "http://localhost:3000]"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"], // ✅ Ensure headers are allowed
   })
 );
 
